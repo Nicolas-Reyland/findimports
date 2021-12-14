@@ -985,11 +985,11 @@ def main(argv=None):
     if opts.pip_format:
         opts.action = "printImportsPip"
         if not opts.condense_to_packages:
-            print("# WARNING: You used the `-P`/`--pip-format` option"
-                  " without the `-p`/`--packages` option")
+            print("# WARNING: You asked for a pip-compliant output"
+                  " (-P/--pip-format) without the -p/--packages option")
         if not opts.ignore_stdlib:
-            print("# WARNING: You used the `-P`/`--pip-format` option"
-                  " without the `--ignore-stdlib` option")
+            print("# WARNING: You asked for a pip-compliant output"
+                  " (-P/--pip-format) without the --ignore-stdlib option")
 
     g = ModuleGraph()
     g.all_unused = opts.all_unused

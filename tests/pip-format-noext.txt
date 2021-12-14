@@ -1,0 +1,19 @@
+Producing import graphs listing all imported names except python standard
+=========================================================================
+
+findimports can produce a detailed list of all imported names
+
+    >>> from findimports import main
+    >>> exitcode = main(['findimports', '--pip-format', '--noext', sample_tree])
+    # WARNING: You asked for a pip-compliant output (-P/--pip-format) without the -p/--packages option
+    # WARNING: You asked for a pip-compliant output (-P/--pip-format) without the --ignore-stdlib option
+    # apple:
+    <BLANKLINE>
+    # box.__init__:
+    <BLANKLINE>
+    # box.cat:
+    box.yarn
+    # box.yarn:
+    <BLANKLINE>
+    # orange:
+    <BLANKLINE>
